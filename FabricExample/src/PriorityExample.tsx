@@ -1,6 +1,6 @@
 import React from 'react'
 import { PixelRatio, StyleSheet, View } from 'react-native'
-import FastImage from 'react-native-fast-image'
+import FastImage from '@dangttp/react-native-fast-image'
 import Section from './Section'
 import SectionFlex from './SectionFlex'
 import FeatureText from './FeatureText'
