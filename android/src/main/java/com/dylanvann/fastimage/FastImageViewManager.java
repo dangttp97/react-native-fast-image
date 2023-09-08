@@ -28,7 +28,6 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.UIManagerHelper;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.events.EventDispatcher;
-import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper;
 import com.facebook.react.uimanager.ViewManagerDelegate;
@@ -51,6 +50,7 @@ class FastImageViewManager extends SimpleViewManager<FastImageViewWithUrl> imple
     @Nullable
     private RequestManager requestManager = null;
     private final ViewManagerDelegate<FastImageViewWithUrl> mDelegate;
+
 
     @Nullable
     @Override
@@ -145,7 +145,8 @@ class FastImageViewManager extends SimpleViewManager<FastImageViewWithUrl> imple
             for (FastImageViewWithUrl view : viewsForKey) {
                 ThemedReactContext context = (ThemedReactContext) view.getContext();
                 int viewId = view.getId();
-                EventDispatcher eventDispatcher = UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
+                EventDispatcher eventDispatcher =
+                        UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
                 if (eventDispatcher == null) {
                     return;
                 }

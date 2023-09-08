@@ -63,7 +63,6 @@ class FastImageViewConverter {
 
         if (source.hasKey("headers")) {
             LazyHeaders.Builder builder = new LazyHeaders.Builder();
-
             ReadableArray headersArray = source.getArray("headers");
             for (int i = 0; i < headersArray.size(); i++) {
                 ReadableMap header = headersArray.getMap(i);

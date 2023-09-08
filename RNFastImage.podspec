@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.authors       = { "Dylan Vann" => "dylan@dylanvann.com" }
   s.homepage      = "https://github.com/DylanVann/react-native-fast-image#readme"
   s.license       = "MIT"
-  s.framework     = 'UIKit'
   s.requires_arc  = true
+  s.framework     = 'UIKit'
   s.source        = { :git => "https://github.com/DylanVann/react-native-fast-image.git", :tag => "v#{s.version}" }
 
   if fabric_enabled
@@ -26,7 +26,13 @@ Pod::Spec.new do |s|
     s.compiler_flags  = folly_compiler_flags + ' -DRCT_NEW_ARCH_ENABLED'
     s.source_files    = 'ios/**/*.{h,m,mm,cpp}'
 
-    install_modules_dependencies(s)
+    s.dependency "React"
+    s.dependency "React-RCTFabric"
+    s.dependency "React-Codegen"
+    s.dependency "RCT-Folly"
+    s.dependency "RCTRequired"
+    s.dependency "RCTTypeSafety"
+    s.dependency "ReactCommon/turbomodule/core"
   else
     s.platforms     = { :ios => "8.0", :tvos => "9.0" }
     s.source_files  = "ios/**/*.{h,mm}"

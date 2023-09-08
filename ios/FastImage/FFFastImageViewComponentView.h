@@ -6,6 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FFFastImageViewComponentView : RCTViewComponentView
 
+
 @end
 
 NS_ASSUME_NONNULL_END

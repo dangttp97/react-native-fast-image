@@ -47,11 +47,6 @@ android {
                     srcDir "src"
                     exclude "**/FastImageGlideModule.java"
                 }
-                if (!isNewArchitectureEnabled()) {
-                srcDirs += [
-                    "src/paper/java",
-                    ]
-                }
             }
         }
     }

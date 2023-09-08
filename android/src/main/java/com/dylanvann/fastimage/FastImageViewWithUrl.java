@@ -87,7 +87,8 @@ class FastImageViewWithUrl extends AppCompatImageView {
         if (imageSource != null && imageSource.getUri().toString().length() == 0) {
             ThemedReactContext context = (ThemedReactContext) getContext();
             int viewId = getId();
-            EventDispatcher eventDispatcher = UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
+            EventDispatcher eventDispatcher =
+                    UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
             if (eventDispatcher == null) {
                 return;
             }
@@ -126,6 +127,7 @@ class FastImageViewWithUrl extends AppCompatImageView {
 
         ThemedReactContext context = (ThemedReactContext) getContext();
         if (imageSource != null) {
+            // This is an orphan even without a load/loadend when only loading a placeholder
             int viewId = getId();
             EventDispatcher eventDispatcher =
                     UIManagerHelper.getEventDispatcherForReactTag(context, viewId);

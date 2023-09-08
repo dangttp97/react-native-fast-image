@@ -1,6 +1,6 @@
 {
     "name": "react-native-fast-image",
-    "version": "9.0.0",
+    "version": "9.1.0",
     "description": "🚩 FastImage, performant React Native image component.",
     "keywords": [
         "cache",
@@ -9,13 +9,13 @@
         "image",
         "priority"
     ],
-    "homepage": "https://github.com/dangttp97/react-native-fast-image#readme",
+    "homepage": "https://github.com/DylanVann/react-native-fast-image#readme",
     "bugs": {
-        "url": "https://github.com/dangttp97/react-native-fast-image/issues"
+        "url": "https://github.com/DylanVann/react-native-fast-image/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/dangttp97/react-native-fast-image.git"
+        "url": "https://github.com/DylanVann/react-native-fast-image.git"
     },
     "license": "(MIT AND Apache-2.0)",
     "author": "Dylan Vann <dylan@dylanvann.com> (https://dylanvann.com)",
@@ -34,7 +34,8 @@
         "build": "dv-scripts build && cp src/index.js.flow dist/index.js.flow && cp src/index.js.flow dist/index.cjs.js.flow",
         "lint": "dv-scripts lint",
         "release": "dv-scripts release",
-        "test": "dv-scripts test"
+        "test": "dv-scripts test",
+        "prepare": "npm run build"
     },
     "prettier": {
         "semi": false,
@@ -71,7 +72,7 @@
         "metro-react-native-babel-preset": "^0.66.1",
         "prettier": "^2.3.2",
         "react": "17.0.2",
-        "react-native": "^0.64.2",
+        "react-native": "0.64.2",
         "react-test-renderer": "17.0.2",
         "typescript": "^4.3.5"
     },
@@ -80,14 +81,11 @@
         "react-native": ">=0.60.0"
     },
     "codegenConfig": {
-        "name": "rnfastimage",
-        "type": "all",
-        "jsSrcsDir": "./src",
-        "android": {
-            "javaPackageName": "com.dylanvann.fastimage"
-        }
-    },
-    "dependencies": {
-        "@jest/create-cache-key-function": "^27"
+      "name": "rnfastimage",
+      "type": "all",
+      "jsSrcsDir": "./src",
+      "android": {
+        "javaPackageName": "com.dylanvann.fastimage"
+      }
     }
 }

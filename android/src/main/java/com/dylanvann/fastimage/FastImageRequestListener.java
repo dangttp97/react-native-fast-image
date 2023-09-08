@@ -37,7 +37,8 @@ public class FastImageRequestListener implements RequestListener<Drawable> {
         FastImageViewWithUrl view = (FastImageViewWithUrl) ((ImageViewTarget) target).getView();
         ThemedReactContext context = (ThemedReactContext) view.getContext();
         int viewId = view.getId();
-        EventDispatcher eventDispatcher = UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
+        EventDispatcher eventDispatcher =
+                UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
         if (eventDispatcher == null) {
             return false;
         }
@@ -54,7 +55,8 @@ public class FastImageRequestListener implements RequestListener<Drawable> {
         FastImageViewWithUrl view = (FastImageViewWithUrl) ((ImageViewTarget) target).getView();
         ThemedReactContext context = (ThemedReactContext) view.getContext();
         int viewId = view.getId();
-        EventDispatcher eventDispatcher = UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
+        EventDispatcher eventDispatcher =
+                UIManagerHelper.getEventDispatcherForReactTag(context, viewId);
         if (eventDispatcher == null) {
             return false;
         }
