@@ -1,0 +1,7 @@
+{
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "files.associations": {
+        "*.mm": "objective-cpp",
+        "*.h": "objective-cpp"
+    },
+}
