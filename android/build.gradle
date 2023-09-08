@@ -12,11 +12,16 @@ buildscript {
             mavenCentral()
         }
         dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:7.2.1'
+=======
+            classpath 'com.android.tools.build:gradle:3.5.3'
+>>>>>>> origin/main
         }
     }
 }
 
+<<<<<<< HEAD
 def isNewArchitectureEnabled() {
     // To opt-in for the New Architecture, you can either:
     // - Set `newArchEnabled` to true inside the `gradle.properties` file
@@ -29,6 +34,8 @@ if (isNewArchitectureEnabled()) {
     apply plugin: "com.facebook.react"
 }
 
+=======
+>>>>>>> origin/main
 apply plugin: 'com.android.library'
 
 android {
